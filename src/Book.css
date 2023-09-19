@@ -1,0 +1,21 @@
+ .card {
+      text-align: left;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+      padding: 10px;
+    }
+  
+   
+  
+    h2 {
+      font-size: 15px;
+      color: #999;
+    }
+  
+    button {
+      background-color: #ff3e00;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      border: none;
+    }

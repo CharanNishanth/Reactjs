@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route ,Routes,Link} from 'react-router-dom';
+import Home from './Home';
+import BookCardCon from './BookCardCon';
+import BookListApiCon from './BookListApiCon';
+// import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <nav>
+        <Link to="/"> Home </Link>
+        <Link to='/bookcard' > Bookcard </Link>
+        <Link to='/booklist' > BookList </Link>
+        </nav>
+        <div>
+        <Routes>
+          <Route exact path="/" element = {<Home />} />
+          <Route path='/bookcard' element={<BookCardCon />} />
+          <Route path='/booklist' element={<BookListApiCon/>}></Route>
+       </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
